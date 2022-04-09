@@ -1,5 +1,10 @@
 // ! глобальные стили
 
+
+// grid - сетка страницы
+
+.grid-template {}
+
 // Container
 
 .container {
@@ -25,15 +30,112 @@
 
 // * Body
 
+html,
 body {
   font-family: $fontMain;
-  font-weight: 300;
+  font-size: 62.5%; // 10px удобно для rem
+  background: $blackTheme;
+  color: $fontMainColor;
 
   &.locked {
     // стиль для боди при открытом бургер менб, чтобы не прокручивался конент под меню
     overflow: hidden;
   }
 }
+
+// * сброс базового размера шрифта при верстке на rem
+@media (max-width: 108em) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 105em) {
+  html {
+    font-size: 8.75px;
+  }
+}
+
+@media (max-width: 91.5em) {
+  html {
+    font-size: 7.9px;
+  }
+}
+
+@media (max-width: 91em) {
+  html {
+    font-size: 8.4px;
+  }
+}
+
+@media (max-width: 90em) {
+  html {
+    font-size: 7.9px;
+  }
+}
+
+@media (max-width: 80em) {
+  html {
+    font-size: 7.2px;
+  }
+}
+
+@media (max-width: 72em) {
+  html {
+    font-size: 6.5px;
+  }
+}
+
+@media (max-width: 64em) {
+  html {
+    font-size: 5.5px;
+  }
+}
+
+// 768px
+@media (max-width: 48em) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 44em) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 38em) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 34em) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 30em) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 26em) {
+  html {
+    font-size: 4.5px;
+  }
+}
+
+@media (max-width: 21em) {
+  html {
+    font-size: 4.4px;
+  }
+}
+
+
 
 // * Animations
 // * Fade

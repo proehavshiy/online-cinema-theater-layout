@@ -12,29 +12,87 @@
 
 // * Main SCSS Content
 
-.heading {
-  font-style: normal;
-  font-weight: 700;
-  color: $colorFontMain;
+
+// ! потом перенести в reset
+.nav-element {
+  font-family: inherit;
+  font-weight: 400;
 }
 
-.text {
-  font-style: normal;
-  font-weight: 300;
-  @include adaptive-font(14, 12);
-  line-height: 1.71;
-  color: $colorSubheading;
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+a {
+  color: inherit;
+}
+
+input {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+// !
+
+// grid - сетка
+.grid-template {
+  display: grid;
+
+  // .grid-template_main
+
+  &_main {
+    grid-template-areas:
+      "header"
+      "content"
+    ;
+    grid-template-columns: 1fr;
+    gap: 8rem;
+
+    &>*:first-child {
+      grid-area: header;
+    }
+
+    &>*:last-child {
+      grid-area: content;
+    }
+  }
+
+  // .grid-template_content
+
+  &_content {
+    grid-template-areas:
+      "aside main main"
+      "aside main main"
+      "aside main main"
+    ;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 3.6rem;
+
+    &>*:first-child {
+      grid-area: aside;
+    }
+
+    &>*:last-child {
+      grid-area: main;
+    }
+  }
 }
 
 //*
 
 // * компоненты
 // кнопка
-@import"../htmlParts/components/button/button";
-@import"../htmlParts/components/Grid-for-cards/Grid-for-cards";
-@import "../htmlParts/components/Card-with-image/card-with-image";
-@import"../htmlParts/components/Social-bar/Social-bar";
+// @import"../htmlParts/components/button/button";
+// @import"../htmlParts/components/Grid-for-cards/Grid-for-cards";
+// @import "../htmlParts/components/Card-with-image/card-with-image";
+// @import"../htmlParts/components/Social-bar/Social-bar";
 
 // * Sections SCSS files imports
 @import "_header";
-@import"_footer";
+@import"_aside-bar";
+@import"_main";
+// @import"_footer";

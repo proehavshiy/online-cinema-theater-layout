@@ -13,12 +13,8 @@ node_modules/
 
 # files
 /gulp/version.json
-/src/fonts/*
-/src/files/*
-/src/img/*
-/src/svgicons/*
 
-!/src/fonts/.keep
-!/src/files/.keep
-!/src/svgicons/.keep
-!/src/img/.keep
+/src/fonts/.keep
+/src/files/.keep
+/src/svgicons/.keep
+/src/img/.keep

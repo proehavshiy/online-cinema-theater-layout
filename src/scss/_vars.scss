@@ -1,8 +1,8 @@
 // * Container & breakpoints
 @use "sass:math"; // подключение модуля math
 $maxWidth: 1440; // макс ширина по макету
-$containerWidth: 1080; // ширина контейнера контента - ширина - сумма паддиногов
-$containerPadding: 40; // паддинги по бокам от контейнера - сумма паддингов
+$containerWidth: 1392; // ширина контейнера контента - ширина - сумма паддиногов
+$containerPadding: 48; // паддинги по бокам от контейнера - сумма паддингов
 $containerSidePadding: math.div($containerPadding, 2);
 $breakpoint1200: 1199.98+px;
 $breakpoint992: 991.98+px;
@@ -10,7 +10,7 @@ $breakpoint768: 767.98+px;
 $breakpoint480: 479.98+px;
 
 // * Fonts
-$fontMain: 'Metropolis',
+$fontMain: 'Roboto',
 sans-serif;
 
 // * Colors
@@ -23,6 +23,10 @@ $colorFontMain: #232427;
 $colorFontDop: #5E5C6C;
 $colorSubheading: #9998A4;
 
+$fontMainColor: #FFFFFF;
+$fontBackColor: rgba(255, 255, 255, 0.2);
+$blackTheme: #17161B;
+
 // * transitions & animations
 $linkTransition: all .3s ease;
 $cycledLinearAnimation: .8s infinite linear;
@@ -30,11 +34,11 @@ $cycledLinearAnimation: .8s infinite linear;
 
 // * Header & Burger menu options
 $burgerBreakpoint: $breakpoint768;
-$burgerColor: $colorBg;
-$burgerColor_active: $colorBg;
-$burgerFontColor_active: $colorFontMain;
-$burgerButtonColor: $colorFontMain;
-$burgerButtonColor_active: $colorFontMain;
+$burgerColor: $fontMainColor;
+$burgerColor_active: $blackTheme;
+$burgerFontColor_active: $fontMainColor;
+$burgerButtonColor: $fontMainColor;
+$burgerButtonColor_active: $fontMainColor;
 $headerPosition: relative; // fixed or relative
 
 // * Mixins
