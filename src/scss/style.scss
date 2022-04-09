@@ -1,0 +1,40 @@
+// * Global SCSS imports
+@import "normalize";
+@import "_reset";
+@import "fonts";
+@import "_vars";
+@import "_global";
+
+
+// * Libs
+//@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+// * Main SCSS Content
+
+.heading {
+  font-style: normal;
+  font-weight: 700;
+  color: $colorFontMain;
+}
+
+.text {
+  font-style: normal;
+  font-weight: 300;
+  @include adaptive-font(14, 12);
+  line-height: 1.71;
+  color: $colorSubheading;
+}
+
+//*
+
+// * компоненты
+// кнопка
+@import"../htmlParts/components/button/button";
+@import"../htmlParts/components/Grid-for-cards/Grid-for-cards";
+@import "../htmlParts/components/Card-with-image/card-with-image";
+@import"../htmlParts/components/Social-bar/Social-bar";
+
+// * Sections SCSS files imports
+@import "_header";
+@import"_footer";

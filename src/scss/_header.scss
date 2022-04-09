@@ -1,0 +1,10 @@
+// фиксированная шапка
+header {
+  position: $headerPosition;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+@import"../htmlParts/components/Navbar/_navbar";

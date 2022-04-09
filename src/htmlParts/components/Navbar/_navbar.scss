@@ -1,0 +1,187 @@
+@import url(../button/button.scss);
+
+.navbar {
+  background-color: $burgerColor;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  height: 72px;
+}
+
+.logo {
+  z-index: 55;
+}
+
+.logo__img {
+  width: 30px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+  align-items: center;
+  gap: 50px;
+
+
+  // .menu__item
+  &__item {
+
+    &:last-child {
+      padding: 13px 20px;
+
+      a {
+        // цвет текста на кнопке
+        color: inherit;
+      }
+    }
+  }
+
+  // .menu__item-link
+  &__item-link {
+    color: $colorFontDop;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    transition: $linkTransition;
+
+    &>svg {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      color: $colorSubheading;
+
+      svg {
+        fill: $colorSubheading;
+        transition: $linkTransition;
+      }
+    }
+
+    // &:last-child {
+    //   color: inherit;
+    // }
+
+    svg {
+      fill: $colorFontDop;
+    }
+  }
+}
+
+.burger {
+  display: none;
+}
+
+// * Burger menu styles
+@media screen and (max-width: $burgerBreakpoint) {
+
+  // .menu
+  .menu {
+    position: fixed;
+    background: $burgerColor_active;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: min-content;
+    grid-template-rows: repeat(auto-fit, minmax(50px, max-content));
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); // раскрытое меню по бургеру - начальное положение
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: all 0.5s ease 0s;
+    pointer-events: none;
+
+    &.active {
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); // раскрытое меню по бургеру
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+      pointer-events: all;
+      z-index: 22;
+      transition: all 0.5s ease 0s;
+    }
+
+    &__item-link {
+      color: $burgerFontColor_active;
+      font-size: 24px;
+
+      svg {
+        display: none;
+      }
+    }
+
+
+
+
+  }
+
+  // * burger
+  .burger {
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 30px;
+    z-index: 102;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      background: $burgerButtonColor;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s ease 0s;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      position: absolute;
+      background-color: $burgerButtonColor;
+      left: 0;
+      top: 9px;
+      width: 100%;
+      height: 2px;
+      transition: all 0.3s ease 0s;
+    }
+
+    &.active-burger {
+      &:before {
+        transform: rotate(45deg);
+        top: 9px;
+        background-color: $burgerButtonColor_active;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+        background-color: $burgerButtonColor_active;
+      }
+
+      span {
+        transform: scale(0);
+      }
+    }
+  }
+}

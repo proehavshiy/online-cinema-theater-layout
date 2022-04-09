@@ -1,0 +1,33 @@
+.social-bar {
+  margin: 34px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+  gap: 30px;
+
+  @media (max-width: $breakpoint480) {
+    margin: 34px 0 0 0;
+    gap: 20px;
+  }
+
+  // .social-bar__item
+
+  &__item {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: $colorFontDop;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: $linkTransition;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  // .social-bar__item-link
+
+  &__item-link {}
+}

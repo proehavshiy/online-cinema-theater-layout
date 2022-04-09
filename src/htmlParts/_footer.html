@@ -1,0 +1,35 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__item">
+        <div class="footer__logo-wrapper">
+          <div class="logo">
+            <a href="#" class="logo">
+              <img class="logo__img" src="@img/logo.png" alt="logo">
+            </a>
+          </div>
+          <p class="footer__caption text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="footer__copyright">
+          <p class="footer__made text">Made with love for DAOs</p>
+          <p class="footer__copy text">2021 Inc.</p>
+        </div>
+      </div>
+      <div class="footer__item">
+        <div class="footer__subscribe">
+          <h3 class="footer__heading">Subscribe to our newsletter</h3>
+          <form class="footer__form form">
+            <label class="form__label">
+              <input type="email" class="form__input text" name="email" placeholder="Email Address">
+              <button class="form__submit">
+                <img src="@img/send-arrow.svg" alt="sumbit-icon">
+              </button>
+            </label>
+          </form>
+          <p class="footer__subheading text">We will send you updates on the latest news and features. No spam.</p>
+        </div>
+        @@include('../htmlParts/components/Social-bar/Social-bar.html', {})
+      </div>
+    </div>
+  </div>
+</footer>

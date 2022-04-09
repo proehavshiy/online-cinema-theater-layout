@@ -1,0 +1,36 @@
+// * Mixins 
+
+// adaptive font
+// подключить 
+// @include adaptive-font(40, 24)
+@mixin adaptive-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize; // разница между требуемыми макс размером и минимальным шрифта
+  $addMobSize: $addSize + $addSize * 0.7; // поправочный коэффициент для мобилок
+
+  @media (max-width: 767px) {
+    // для мобилок надо скорректировать, тк если не скорректировать, то за точку отсчета будет браться 0 px, а нам нужно 320px
+    font-size: calc(#{$mobSize+px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+
+  @media (min-width: 767px) {
+    font-size: calc(#{$mobSize+px} + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+}
+
+// хак для поддержки gap на flex тк IOS до 14.1 не работает
+// @include gap-flex-safari(40px, 50px, 20px);
+
+@mixin gap-flex-safari($rowGap, $columnGap, $marginTop) {
+
+  // https: //stackoverflow.com/questions/16348489/is-there-a-css-hack-for-safari-only-not-chrome
+  @media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+      &>* {
+        margin: $rowGap/2 $columnGap/2;
+      }
+
+      // если нужен margin-top, то его нужно ставить сюда
+      margin-top: $marginTop;
+    }
+  }
+}

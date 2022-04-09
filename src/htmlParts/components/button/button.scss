@@ -1,0 +1,20 @@
+.button {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background: $colorMain;
+  color: $colorBg;
+  fill: $colorBg;
+  border-radius: 4px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  transition: $linkTransition;
+
+  &:hover {
+    background-color: $colorMainDark;
+  }
+}

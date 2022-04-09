@@ -1,0 +1,54 @@
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 4px;
+
+  // .card__photo
+
+  &__photo {
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  // .card__figcaption
+
+  &__figcaption {
+    margin: 15px 0 0 0;
+  }
+
+  // .card__title
+
+  &__title {
+
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  // .card__social-bar
+
+  &__social-bar {
+    margin: 7px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 1px));
+    align-items: center;
+    gap: 13px;
+  }
+
+  // .card__social
+
+  &__social {}
+
+  // .card__social-link
+
+  &__social-link {
+    display: flex;
+  }
+
+  // .card__social-icon
+
+  &__social-icon {}
+}

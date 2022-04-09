@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./htmlParts/_head.html',{
+"title":"Главная",
+"styleHref": "css/style.min.css",
+})
+
+<body>
+  <!-- Header -->
+  @@include('./htmlParts/_header.html',{})
+
+  <!-- main content -->
+  <main>
+    <img width="150px" src="@img/Pug.webp" alt="pug1">
+    <h1>Home page</h1>
+    <ul class="grid-box">
+      <li class="grid-box__item">
+        @@include('./htmlParts/components/Card-with-image/card-with-image.html', {})
+      </li>
+      <li class="grid-box__item">
+        @@include('./htmlParts/components/Card-with-image/card-with-image.html', {})
+      </li>
+      <li class="grid-box__item">
+        @@include('./htmlParts/components/Card-with-image/card-with-image.html', {})
+      </li>
+      <li class="grid-box__item">
+        @@include('./htmlParts/components/Card-with-image/card-with-image.html', {})
+      </li>
+    </ul>
+  </main>
+
+  <!-- Footer -->
+  @@include('htmlParts/_footer.html')
+
+  <!-- Modal -->
+  <!-- @@include('htmlParts/_modal.html') -->
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
