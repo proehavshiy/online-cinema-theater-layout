@@ -1,10 +1,6 @@
 // ! глобальные стили
 
 
-// grid - сетка страницы
-
-.grid-template {}
-
 // Container
 
 .container {
@@ -28,6 +24,51 @@
   }
 }
 
+
+// grid - сетка
+.grid-template {
+  display: grid;
+
+  // .grid-template_main
+
+  &_main {
+    grid-template-areas:
+      "header"
+      "content"
+    ;
+    grid-template-columns: 1fr;
+    gap: 8rem;
+
+    &>*:first-child {
+      grid-area: header;
+    }
+
+    &>*:last-child {
+      grid-area: content;
+    }
+  }
+
+  // .grid-template_content
+
+  &_content {
+    grid-template-areas:
+      "aside main main"
+      "aside main main"
+      "aside main main"
+    ;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 0;
+
+    &>*:first-child {
+      grid-area: aside;
+    }
+
+    &>*:last-child {
+      grid-area: main;
+    }
+  }
+}
+
 // * Body
 
 html,
@@ -44,92 +85,92 @@ body {
 }
 
 // * сброс базового размера шрифта при верстке на rem
-@media (max-width: 108em) {
+@media (max-width: 1079.99px) {
   html {
     font-size: 9px;
   }
 }
 
-@media (max-width: 105em) {
+@media (max-width: 1049.99px) {
   html {
     font-size: 8.75px;
   }
 }
 
-@media (max-width: 91.5em) {
+@media (max-width: 914.99px) {
   html {
     font-size: 7.9px;
   }
 }
 
-@media (max-width: 91em) {
+@media (max-width: 909.99px) {
   html {
     font-size: 8.4px;
   }
 }
 
-@media (max-width: 90em) {
+@media (max-width: 899.99px) {
   html {
     font-size: 7.9px;
   }
 }
 
-@media (max-width: 80em) {
+@media (max-width: 799.99px) {
   html {
     font-size: 7.2px;
   }
 }
 
-@media (max-width: 72em) {
+@media (max-width: 719.99px) {
   html {
     font-size: 6.5px;
   }
 }
 
-@media (max-width: 64em) {
+@media (max-width: 639.99px) {
   html {
     font-size: 5.5px;
   }
 }
 
 // 768px
-@media (max-width: 48em) {
+@media (max-width: 479.99px) {
   html {
     font-size: 10px;
   }
 }
 
-@media (max-width: 44em) {
+@media (max-width: 439.99px) {
   html {
     font-size: 9px;
   }
 }
 
-@media (max-width: 38em) {
+@media (max-width: 379.99px) {
   html {
     font-size: 8px;
   }
 }
 
-@media (max-width: 34em) {
+@media (max-width: 339.99px) {
   html {
     font-size: 7px;
   }
 }
 
-@media (max-width: 30em) {
+@media (max-width: 299.99px) {
   html {
     font-size: 6px;
   }
 }
 
-@media (max-width: 26em) {
+@media (max-width: 259.99px) {
   html {
     font-size: 4.5px;
   }
 }
 
-@media (max-width: 21em) {
+@media (max-width: 209.99px) {
   html {
     font-size: 4.4px;
   }
@@ -164,5 +205,15 @@ body {
 
   to {
     transform: translate(0, 0);
+  }
+}
+
+// * global classes
+
+.hover {
+  transition: $linkTransition;
+
+  &:hover {
+    opacity: .8;
   }
 }

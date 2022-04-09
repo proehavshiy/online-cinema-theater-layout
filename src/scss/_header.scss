@@ -1,11 +1,241 @@
 // фиксированная шапка
-header {
-  // grid-area: header;
+
+.header {
   position: $headerPosition;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 50;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.07);
+
+  // header__nav
+
+  &__nav {
+    margin-right: 9.2rem;
+  }
+
+  // .header__search-bar
+
+  &__search-bar {
+    margin-right: 3.9rem;
+    flex: 0 0 33rem;
+    height: 4.1rem;
+  }
+
+  // .header__search-input
+
+  &__search-input {
+    padding: .9rem 4.5rem .9rem 1rem;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.08) url('../img/sbm-icon.svg') no-repeat;
+    background-size: 2rem;
+    background-position: top 50% right 1.5rem;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.15;
+    color: $fontMainColor;
+    border-radius: .8rem;
+
+    &::placeholder {
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
+
+    &:focus {
+      outline: 1px solid $fontMainColor;
+    }
+
+  }
 }
 
-@import"../htmlParts/components/Navbar/_navbar";
+.content {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  height: 120px;
+  align-items: center;
+
+}
+
+.logo {
+  margin-right: 7rem;
+  max-width: 221px;
+
+
+  // .logo__img
+
+  &__img {}
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  &>*:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+
+  // .menu__item
+
+  &__item {}
+
+  // .menu__item-link
+
+  &__item-link {
+    font-weight: 500;
+    // font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 1.667;
+    transition: $linkTransition;
+
+    &:hover {
+      border-bottom: 3px solid $fontMainColor;
+    }
+  }
+}
+
+.time-bar {
+  margin-right: 8.7rem;
+  text-align: center;
+
+  // .time-bar__time
+
+  &__time {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 0.4rem;
+  }
+
+  // .time-bar__date
+
+  &__date {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.1666;
+  }
+}
+
+.avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  // .avatar__link
+
+  &__link {}
+
+  // .avatar__img
+
+  &__img {}
+}
+
+
+// * Burger menu styles
+@media screen and (max-width: $burgerBreakpoint) {
+
+  // .menu
+  .menu {
+    position: fixed;
+    background: $burgerColor_active;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: min-content;
+    grid-template-rows: repeat(auto-fit, minmax(50px, max-content));
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); // раскрытое меню по бургеру - начальное положение
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: all 0.5s ease 0s;
+    pointer-events: none;
+
+    &.active {
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); // раскрытое меню по бургеру
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+      pointer-events: all;
+      z-index: 22;
+      transition: all 0.5s ease 0s;
+    }
+
+    &__item-link {
+      color: $burgerFontColor_active;
+      font-size: 24px;
+
+      svg {
+        display: none;
+      }
+    }
+
+
+
+
+  }
+
+  // * burger
+  .burger {
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 30px;
+    z-index: 102;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      background: $burgerButtonColor;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s ease 0s;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      position: absolute;
+      background-color: $burgerButtonColor;
+      left: 0;
+      top: 9px;
+      width: 100%;
+      height: 2px;
+      transition: all 0.3s ease 0s;
+    }
+
+    &.active-burger {
+      &:before {
+        transform: rotate(45deg);
+        top: 9px;
+        background-color: $burgerButtonColor_active;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+        background-color: $burgerButtonColor_active;
+      }
+
+      span {
+        transform: scale(0);
+      }
+    }
+  }
+}

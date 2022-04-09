@@ -1,5 +1,50 @@
 <header class="header">
   <div class="container">
-    @@include('../htmlParts/components/Navbar/_navbar.html',{})
+    <div class="content">
+      <div class="logo hover">
+        <a href="#" class="logo">
+          <img class="logo__img" src="@img/logo.svg" alt="logo">
+        </a>
+      </div>
+      <nav class="header__nav">
+        <ul class="menu">
+          <li class="menu__item hover">
+            <a href="#" class="menu__item-link">
+              Movies
+            </a>
+          </li>
+          <li class="menu__item hover">
+            <a href="#" class="menu__item-link">
+              TV shows
+            </a>
+          </li>
+          <li class="menu__item hover">
+            <a href="#" class="menu__item-link">
+              Animations
+            </a>
+          </li>
+          <li class="menu__item hover">
+            <a href="#" class="menu__item-link">
+              Plans
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__search-bar">
+        <input type="text" class="header__search-input" placeholder="Search...">
+      </div>
+      <div class="header__time-bar time-bar">
+        <p class="header__time time-bar__time">19:55</p>
+        <p class="header__date time-bar__date">March 30</p>
+      </div>
+      <div class="avatar hover">
+        <a href="#" class="avatar__link">
+          <img class="avatar__img" src="@img/avatar.png" alt="avatar">
+        </a>
+      </div>
+      <div class="burger">
+        <span></span>
+      </div>
+    </div>
   </div>
 </header>

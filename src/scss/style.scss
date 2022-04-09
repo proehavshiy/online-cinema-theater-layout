@@ -33,54 +33,11 @@ a {
 input {
   outline: none;
   border: none;
-  cursor: pointer;
 }
 
 // !
 
-// grid - сетка
-.grid-template {
-  display: grid;
 
-  // .grid-template_main
-
-  &_main {
-    grid-template-areas:
-      "header"
-      "content"
-    ;
-    grid-template-columns: 1fr;
-    gap: 8rem;
-
-    &>*:first-child {
-      grid-area: header;
-    }
-
-    &>*:last-child {
-      grid-area: content;
-    }
-  }
-
-  // .grid-template_content
-
-  &_content {
-    grid-template-areas:
-      "aside main main"
-      "aside main main"
-      "aside main main"
-    ;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    gap: 3.6rem;
-
-    &>*:first-child {
-      grid-area: aside;
-    }
-
-    &>*:last-child {
-      grid-area: main;
-    }
-  }
-}
 
 //*
 
