@@ -1,0 +1,327 @@
+.card {
+  position: relative;
+  // padding: 1.9rem 1.9rem 0 1.9rem;
+  width: 962px; // temp
+  height: 202px; // temp
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 1.6rem;
+
+  // &_m::before {
+  //   height: 7rem;
+  // }
+
+  // &_s::before {
+  //   height: 4.3rem;
+  // }
+
+  // // card_accent
+  // &_accent {
+  //   &::before {
+  //     content: '';
+  //     display: block;
+  //     width: 100%;
+  //     position: absolute;
+  //     left: 0;
+  //     bottom: 0;
+  //     background: rgba(255, 255, 255, 0.07);
+  //     backdrop-filter: blur(16px);
+  //     /* Note: backdrop-filter has minimal browser support */
+  //     border-radius: 16px;
+  //   }
+  // }
+
+  // card_l
+  &_l {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("../img/card1.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  // card_m
+  &_m {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("../img/card2.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  // card_m
+  &_s {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("../img/card3.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  // // card_default
+
+  // &_default {
+  //   padding: 1.9rem;
+  // }
+
+  // // card_accent
+
+  // &_accent {
+
+  // }
+
+  // .card__views
+
+  &__views {
+    font-style: normal;
+    margin: 1.9rem;
+
+
+    // .card__views_default
+
+    &_default {
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 1.1875;
+    }
+
+    // .card__views_accent
+
+    &_accent {
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.1428;
+
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(16px);
+      /* Note: backdrop-filter has minimal browser support */
+      border-radius: 16px;
+
+      padding: .5rem 1.5rem;
+    }
+
+    // __views_s
+    &_s {
+      visibility: hidden;
+    }
+  }
+
+  // .card__control-bar
+
+  &__control-bar {
+    z-index: 55;
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    justify-content: space-between;
+
+    // &>* {
+    //   z-index: 55;
+    // }
+
+    // &_m::before {
+    //   height: 6.8rem;
+    // }
+
+    // &_s::before {
+    //   height: 3.8rem;
+    // }
+
+    // &::before {
+    //   content: '';
+    //   display: block;
+    //   width: 100%;
+    //   //height: 20%; // temp
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 0;
+    //   background: rgba(255, 255, 255, 0.07);
+    //   backdrop-filter: blur(16px);
+    //   /* Note: backdrop-filter has minimal browser support */
+    //   border-radius: 16px;
+    // }
+
+    // .card__control-bar_l
+
+    &_l {
+      padding: 1.9rem;
+    }
+
+    // .card__control-bar_m
+
+    &_m {
+      padding: 1.9rem;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(16px);
+      /* Note: backdrop-filter has minimal browser support */
+
+      border-radius: 16px;
+    }
+
+    // card__control-bar_s
+
+    &_s {
+      padding: 1rem 1.9rem;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(16px);
+      /* Note: backdrop-filter has minimal browser support */
+
+      border-radius: 16px;
+
+    }
+  }
+
+  // .card__play
+
+  &__play {
+    background: rgba(255, 255, 255, 0.07) url('../img/play-icon.svg') no-repeat;
+    background-position: center center;
+    backdrop-filter: blur(16px);
+    border-radius: 50%;
+    /* Note: backdrop-filter has minimal browser support */
+
+    // .card__play_l
+
+    &_l {
+      width: 8.1rem;
+      height: 8.1rem;
+      background-size: 2rem;
+
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(40.5px, -40.5px);
+    }
+
+
+    // .card__play_m
+
+    &_m {
+      margin-right: 1.5rem;
+      width: 3rem;
+      height: 3rem;
+      background-size: 1.11rem 1.11rem;
+    }
+
+    // .card__play_s
+
+    &_s {
+      margin-right: 1rem;
+      width: 1.8rem;
+      height: 1.8rem;
+      background-size: .667rem .667rem;
+    }
+  }
+
+
+  // card__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .card__info
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    // .card__info_default
+
+    &_default {}
+  }
+
+  // .card__name
+
+  &__name {
+    font-style: normal;
+    font-weight: 700;
+
+    // .card__name_l
+
+    &_l {
+      font-size: 2.4rem;
+      line-height: 1.1666;
+      margin-bottom: .5rem;
+    }
+
+    // .card__name_s
+
+    &_s {
+      font-size: 1rem;
+      line-height: 1.2rem;
+      margin-bottom: .2rem;
+    }
+
+    // .card__name_m
+
+    &_m {
+      font-size: 1.5rem;
+      line-height: 1.2;
+      margin-bottom: .2rem;
+    }
+  }
+
+  // .card__date
+
+  &__date {
+    font-style: normal;
+    font-weight: 700;
+
+    // .card__date_l
+
+    &_l {
+      font-size: 1.4rem;
+      line-height: 1.1428;
+    }
+
+    // .card__date_s
+
+    &_s {
+      font-size: .8rem;
+      line-height: 1.125;
+    }
+
+    // .card__date_m
+
+    &_m {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+  }
+
+  // .card__tech
+
+  &__tech {
+    margin: auto 0;
+    // .card__tech_default
+
+    &_default {}
+  }
+
+  // .card__timer
+
+  &__timer {
+    padding: .4rem 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.1428;
+    color: #000000;
+    background: $fontMainColor;
+    border-radius: 1.6rem;
+  }
+
+  // .card__rating
+
+  &__rating {
+    padding-left: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2;
+
+    background: url('../img/star-icon.svg') no-repeat;
+    background-size: 1rem 1rem;
+    background-position-y: center;
+  }
+}
