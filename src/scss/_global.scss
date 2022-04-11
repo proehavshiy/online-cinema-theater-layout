@@ -56,8 +56,8 @@
       "aside main main"
       "aside main main"
     ;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    gap: 0;
+    grid-template-columns: minmax(min-content, 39.4rem) minmax(min-content, 96.2rem);
+    gap: 3.6rem;
 
     &>*:first-child {
       grid-area: aside;

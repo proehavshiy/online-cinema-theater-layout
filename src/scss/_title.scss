@@ -1,0 +1,135 @@
+.title {
+  margin-bottom: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // title_aside
+
+  &_aside {
+    margin-bottom: 2.6rem;
+  }
+
+  // .title__left
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    &>*:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  // .title__main
+
+  &__main {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  // .title__count
+
+  &__count {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.15;
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  // .title__right
+
+  &__right {
+    display: flex;
+    align-items: center;
+
+    & img {
+      width: .45rem;
+      height: .9rem;
+    }
+  }
+
+  // .title__operation-name
+
+  &__operation-name {
+    margin-right: .8rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.1428;
+
+    color: rgba(255, 255, 255, 0.2);
+
+    // title__operation-name_aside
+    &_aside {
+      margin-right: 1.5rem;
+    }
+  }
+
+  // .title__operation
+
+  &__operation {
+    display: flex;
+
+    & button {
+      width: .6rem;
+      height: .6rem;
+      background: none;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  // title__buttons-wrapper
+
+  &__buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &>* {
+      padding: .2rem;
+    }
+  }
+
+  // title__button-next
+  &__button-next {
+    background-image: url('../img/select-icon1.svg') !important;
+
+  }
+
+  // title__button-prev
+  &__button-prev {
+    background-image: url('../img/select-icon1.svg') !important;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+
+  // .title__operation-value
+
+  &__operation-value {
+    margin-right: 0.4rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.1428;
+    color: #FFFFFF;
+  }
+}
+
+
+.title {
+
+  // .title__left
+
+  &__left {}
+
+  // .title__main
+
+  &__main {}
+
+  // .title__right
+
+  &__right {}
+
+
+}

@@ -1,3 +1,24 @@
-<main class="main-board main">
-  @@include('../htmlParts/_card.html', {})
+<main class="main">
+  <section class="main-display">
+    <div class="main-display__section">
+      <div class="main-display__card-wrapper main-display__card-wrapper_trailer">
+        @@include('../htmlParts/_card_bilboard.html')
+      </div>
+    </div>
+    <div class="main-display__section">
+      @@include('../htmlParts/_title_continue.html')
+      <div class="main-display__card-wrapper main-display__card-wrapper_continuing">
+        @@include('../htmlParts/_card_continue.html')
+        @@include('../htmlParts/_card_continue.html')
+      </div>
+    </div>
+    <div class="main-display__section">
+      @@include('../htmlParts/_title_trending.html')
+      <div class="main-display__card-wrapper main-display__card-wrapper_trending">
+        @@include('../htmlParts/_card_trending.html')
+        @@include('../htmlParts/_card_trending.html')
+        @@include('../htmlParts/_card_trending.html')
+      </div>
+    </div>
+  </section>
 </main>

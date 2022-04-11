@@ -1,3 +1,147 @@
 .control-bar {
-  // grid-area: aside;
+  padding-right: 2.3rem;
+  position: relative;
+  border-right: 1px solid #1C1B1F;
+
+  // &::before {
+  //   content: '';
+  //   width: 100%;
+  //   height: 100%;
+  //   position: fixed;
+  //   left: 0;
+  //   bottom: 0;
+  //   background: rgba(255, 255, 255, 0.02);
+  // }
+
+  // .control-bar__button
+
+  &__button {
+    position: absolute;
+    top: 5.7rem;
+    right: -1.2rem;
+    z-index: 55;
+    width: 2.2rem;
+    height: 2.6rem;
+    background: #FCFCFE;
+    border-radius: 2rem;
+    background-image: url('../img/arrow2.svg');
+    background-repeat: no-repeat;
+    background-position: 42% 50%;
+  }
+
+  // .control-bar__trailers
+
+  &__trailers {
+    margin: 0 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+
+    &>*:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // .control-bar__favorites
+
+  &__favorites {}
+}
+
+.favourites {
+  padding: 2.5rem 2.3rem 4rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  // .favourites__heading
+
+  &__heading {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 2rem;
+  }
+
+  // .favourites__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 2rem 3rem;
+
+
+    // .favourites__list_added
+
+    &_added {
+      position: relative;
+      padding-bottom: 3rem;
+      margin-bottom: 3.1rem;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: 6.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      &>*:nth-child(2n+1) {
+        background: #8066F6;
+      }
+
+      &>*:nth-child(2n) {
+        background: #E1784F;
+      }
+
+      &>*:nth-child(5n) {
+        background: #63CFE1;
+      }
+    }
+
+    // .favourites__list_recommended
+
+    &_recommended {
+      &>* {
+        background: #2B2A2F;
+      }
+    }
+  }
+
+  // .favourites__item
+
+  &__item {
+    padding: .5rem 1rem .6rem 1rem;
+    border-radius: 3rem;
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.1666;
+    color: #FFFFFF;
+  }
+
+  // .favourites__control-bar
+
+  &__control-bar {
+    margin-bottom: 2.1rem;
+  }
+
+  // .favourites__button-add
+
+  &__button-add {
+    display: flex;
+    align-items: center;
+    background: none;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.1428;
+    color: #FFFFFF;
+
+    & span {
+      margin-right: .5rem;
+      display: block;
+      width: 1.8rem;
+      height: 1.8rem;
+      background: #2B2A2F;
+      border-radius: 50%;
+      line-height: 1.4;
+    }
+  }
 }

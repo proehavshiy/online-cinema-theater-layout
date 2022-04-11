@@ -1,14 +1,27 @@
 .card {
   position: relative;
   // padding: 1.9rem 1.9rem 0 1.9rem;
-  width: 962px; // temp
-  height: 202px; // temp
+  // width: 962px; // temp
+  // height: 202px; // temp
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-end;
   border-radius: 1.6rem;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 1.6rem;
+    z-index: 1;
+  }
 
   // &_m::before {
   //   height: 7rem;
@@ -34,26 +47,46 @@
   //   }
   // }
 
+  // card_accent
+  &_accent {}
+
   // card_l
   &_l {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url("../img/card1.jpg") no-repeat;
+    min-height: 20.2rem;
+    // background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    background: url("../img/card1.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
+  }
+
+  // card_l-sidebar
+  &_l-sidebar {
+    min-height: 22.6rem;
   }
 
   // card_m
   &_m {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url("../img/card2.jpg") no-repeat;
+    min-height: 25.1rem;
+    background: url("../img/card2.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    // показываем плашку trending 
+    &:first-child .card__views_accent {
+      display: block;
+    }
   }
 
-  // card_m
+  // card_s
   &_s {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url("../img/card3.jpg") no-repeat;
+    min-height: 19.2rem;
+    background: url("../img/card3.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   // // card_default
@@ -71,8 +104,11 @@
   // .card__views
 
   &__views {
+    position: absolute;
+    top: 1.9rem;
+    left: 1.9rem;
     font-style: normal;
-    margin: 1.9rem;
+    z-index: 2;
 
 
     // .card__views_default
@@ -86,6 +122,7 @@
     // .card__views_accent
 
     &_accent {
+      display: none;
       font-weight: 400;
       font-size: 1.4rem;
       line-height: 1.1428;
@@ -188,7 +225,7 @@
       position: absolute;
       top: 50%;
       right: 50%;
-      transform: translate(40.5px, -40.5px);
+      transform: translate(50%, -50%);
     }
 
 
