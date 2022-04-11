@@ -49,7 +49,29 @@
 .favourites {
   padding: 2.5rem 2.3rem 4rem 0;
   background: rgba(255, 255, 255, 0.02);
+  position: relative;
+
   // .favourites__heading
+
+  // распространить фон блока за границы блока через тень
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    box-shadow: inset 55px 0 0 55px rgb(255 255 255 / 2%);
+  }
+
+  &:before {
+    right: 100%;
+    width: 2.4rem;
+  }
+
+  &:after {
+    left: 100%;
+    width: 2.3rem;
+  }
 
   &__heading {
     font-weight: 400;
@@ -61,9 +83,9 @@
   // .favourites__list
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(3, min-content);
-    gap: 2rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
 
 
     // .favourites__list_added
@@ -107,6 +129,7 @@
   // .favourites__item
 
   &__item {
+    margin: 0 3rem 2rem 0;
     padding: .5rem 1rem .6rem 1rem;
     border-radius: 3rem;
     text-align: center;
@@ -117,15 +140,10 @@
     color: #FFFFFF;
   }
 
-  // .favourites__control-bar
+  // .favourites__subheading
 
-  &__control-bar {
+  &__subheading {
     margin-bottom: 2.1rem;
-  }
-
-  // .favourites__button-add
-
-  &__button-add {
     display: flex;
     align-items: center;
     background: none;
@@ -142,6 +160,7 @@
       background: #2B2A2F;
       border-radius: 50%;
       line-height: 1.4;
+      text-align: center;
     }
   }
 }
