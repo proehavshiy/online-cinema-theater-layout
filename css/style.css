@@ -1105,6 +1105,9 @@ input {
       -ms-flex-pack: end;
           justify-content: flex-end;
   border-radius: 1.6rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card::after {
@@ -1121,14 +1124,11 @@ input {
 }
 
 .no-webp .card_l {
-  background: url("../img/card1.jpg"); }
+  background-image: url("../img/card1.jpg"); }
 
 .card_l {
   width: 100%;
   min-height: 20.2rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   position: relative;
 }
 
@@ -1137,14 +1137,11 @@ input {
 }
 
 .no-webp .card_m {
-  background: url("../img/card2.jpg"); }
+  background-image: url("../img/card2.jpg"); }
 
 .card_m {
   width: 46.8262226847%;
   min-height: 25.1rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .card_m:first-child .card__views_accent {
@@ -1152,14 +1149,11 @@ input {
 }
 
 .no-webp .card_s {
-  background: url("../img/card3.jpg"); }
+  background-image: url("../img/card3.jpg"); }
 
 .card_s {
   width: 29.7606659729%;
   min-height: 19.2rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .card__views {
@@ -1570,8 +1564,8 @@ input {
   }
 }
 
-.webp .card_l { background: url(../img/card1.webp); }
+.webp .card_l { background-image: url(../img/card1.webp); }
 
-.webp .card_m { background: url(../img/card2.webp); }
+.webp .card_m { background-image: url(../img/card2.webp); }
 
-.webp .card_s { background: url(../img/card3.webp); }
+.webp .card_s { background-image: url(../img/card3.webp); }
