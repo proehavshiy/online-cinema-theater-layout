@@ -13,18 +13,23 @@
   // .main-display__card-wrapper
 
   &__card-wrapper {
-    display: grid;
+    // display: grid;
+    display: flex;
     // .main-display__card-wrapper_trailer
 
     &_trailer {
-      grid-template-columns: 1fr;
+      // grid-template-columns: 1fr;
     }
 
     // .main-display__card-wrapper_continuing
 
     &_continuing {
-      grid-template-columns: repeat(auto-fit, minmax(45rem, max-content));
-      gap: 6rem;
+
+      // grid-template-columns: repeat(auto-fit, minmax(45rem, max-content));
+      // gap: 6rem;
+      &>*:not(:last-child) {
+        margin-right: 6rem;
+      }
 
       // &:first-child {
       //   color: rebeccapurple;
@@ -35,10 +40,14 @@
     // .main-display__card-wrapper_trending
 
     &_trending {
+
       // grid-template-columns: repeat(auto-fit, minmax(28.6rem, max-content));
-      grid-template-columns: repeat(auto-fit, minmax(28.6rem, max-content));
+      // grid-template-columns: repeat(auto-fit, minmax(28.6rem, max-content));
       // grid-template-columns: repeat(auto-fit, minmax(28.6rem, 28.6rem));
-      gap: 5rem;
+      // gap: 5rem;
+      &>*:not(:last-child) {
+        margin-right: 5rem;
+      }
     }
   }
 }
