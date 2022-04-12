@@ -57,15 +57,19 @@
       "aside main main"
     ;
     // grid-template-columns: minmax(min-content, 39.4rem) minmax(min-content, 96.2rem);
-    grid-template-columns: 42rem 1fr;
-    gap: 3.6rem;
+    // grid-template-columns: 42rem 1fr; // correct
+
+    grid-template-columns: auto 1fr; // auto потому что transition не работает на grid-template-columns/rows
+    gap: 3.6rem; // correct
 
     &>*:first-child {
       grid-area: aside;
+      transition: all 0.5s;
     }
 
     &>*:last-child {
       grid-area: main;
+      transition: all 0.5s;
     }
   }
 }

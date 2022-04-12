@@ -1,17 +1,26 @@
 .control-bar {
-  padding-right: 2.3rem;
   position: relative;
   border-right: 1px solid #1C1B1F;
+  top: 0;
+  left: 0;
+  width: 0rem; // меняем ширину с 1 до 42, потому что transition на grid-template-columns/rows не работает. Приходится с шириной блока работать
 
-  // &::before {
-  //   content: '';
-  //   width: 100%;
-  //   height: 100%;
-  //   position: fixed;
-  //   left: 0;
-  //   bottom: 0;
-  //   background: rgba(255, 255, 255, 0.02);
-  // }
+  // скрытие блока по кнопке
+  &>*:not(.control-bar__button) {
+    opacity: 0;
+    transition: all .1s ease; // чтобы контент скрывался плавно
+  }
+
+  // control-bar_open
+  &_open {
+    padding-right: 2.3rem;
+    width: 42rem;
+
+    &>*:not(.control-bar__button) {
+      opacity: 1;
+      transition: all .5s linear .3s; // чтобы контент раскрывался плавно c задержкой (чтобы перестраивающийся контент скрыть)
+    }
+  }
 
   // .control-bar__button
 
@@ -27,6 +36,7 @@
     background-image: url('../img/arrow2.svg');
     background-repeat: no-repeat;
     background-position: 42% 50%;
+    background-size: 1.3rem 0.8rem;
   }
 
   // .control-bar__trailers
