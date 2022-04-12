@@ -22,6 +22,16 @@
     }
   }
 
+  // дорисуем padding-right чуть выше блока
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5rem;
+    right: 0;
+    height: 5rem;
+    border-right: 1px solid #1C1B1F;
+  }
+
   // .control-bar__button
 
   &__button {
