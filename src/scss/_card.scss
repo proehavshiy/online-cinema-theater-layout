@@ -6,6 +6,9 @@
   align-items: flex-start;
   justify-content: flex-end;
   border-radius: 1.6rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   &::after {
     content: '';
@@ -28,10 +31,7 @@
     width: 100%;
     min-height: 20.2rem;
     // background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    background: url("../img/card1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("../img/card1.jpg");
     position: relative;
   }
 
@@ -44,10 +44,7 @@
   &_m {
     width: calc(450/961*100%);
     min-height: 25.1rem;
-    background: url("../img/card2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("../img/card2.jpg");
 
     // показываем плашку trending 
     &:first-child .card__views_accent {
@@ -59,10 +56,7 @@
   &_s {
     width: calc(286/961*100%);
     min-height: 19.2rem;
-    background: url("../img/card3.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("../img/card3.jpg");
   }
 
   // .card__views
