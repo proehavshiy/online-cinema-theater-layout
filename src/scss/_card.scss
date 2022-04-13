@@ -28,7 +28,7 @@
 
   // card_l
   &_l {
-    width: 100%;
+    // width: 100%;
     min-height: 20.2rem;
     // background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     background-image: url("../img/card1.jpg");
@@ -42,7 +42,7 @@
 
   // card_m
   &_m {
-    width: calc(450/961*100%);
+    // width: calc(450/961*100%);
     min-height: 25.1rem;
     background-image: url("../img/card2.jpg");
 
@@ -54,7 +54,7 @@
 
   // card_s
   &_s {
-    width: calc(286/961*100%);
+    // width: calc(286/961*100%);
     min-height: 19.2rem;
     background-image: url("../img/card3.jpg");
   }
