@@ -47,6 +47,12 @@
     background-repeat: no-repeat;
     background-position: 42% 50%;
     background-size: 1.3rem 0.8rem;
+    transform: rotateY(-180deg);
+    transition: transform 1s ease;
+
+    &_open {
+      transform: rotateY(0deg);
+    }
   }
 
   // .control-bar__trailers
