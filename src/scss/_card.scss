@@ -94,8 +94,8 @@
 
   &__views {
     position: absolute;
-    top: 1.9em;
-    left: 1.9em;
+    top: 1.9rem;
+    left: 1.9rem;
     font-style: normal;
     z-index: 2;
 
@@ -121,7 +121,7 @@
       /* Note: backdrop-filter has minimal browser support */
       border-radius: 16px;
 
-      padding: .5em 1.5em;
+      padding: .5rem 1.5rem;
     }
 
     // __views_s
@@ -142,13 +142,13 @@
     // .card__control-bar_l
 
     &_l {
-      padding: 1.9em;
+      padding: 1.9rem;
     }
 
     // .card__control-bar_m
 
     &_m {
-      padding: 1.9em;
+      padding: 1.9rem;
       background: rgba(255, 255, 255, 0.07);
       backdrop-filter: blur(16px);
       /* Note: backdrop-filter has minimal browser support */
@@ -159,7 +159,7 @@
     // card__control-bar_s
 
     &_s {
-      padding: 1em 1.9em;
+      padding: 1rem 1.9rem;
       background: rgba(255, 255, 255, 0.07);
       backdrop-filter: blur(16px);
       /* Note: backdrop-filter has minimal browser support */
@@ -195,7 +195,7 @@
     // .card__play_m
 
     &_m {
-      margin-right: 1.5em;
+      margin-right: 1.5rem;
       width: 3em;
       height: 3em;
       background-size: 1.11em 1.11em;
@@ -204,7 +204,7 @@
     // .card__play_s
 
     &_s {
-      margin-right: 1em;
+      margin-right: 1rem;
       width: 1.8em;
       height: 1.8em;
       background-size: .667em .667em;
@@ -241,7 +241,7 @@
     &_l {
       font-size: 2.4em;
       line-height: 1.1666;
-      margin-bottom: .5em;
+      margin-bottom: .5rem;
     }
 
     // .card__name_s
@@ -249,7 +249,7 @@
     &_s {
       font-size: 1em;
       line-height: 1.2;
-      margin-bottom: .2em;
+      margin-bottom: .2rem;
     }
 
     // .card__name_m
@@ -257,7 +257,7 @@
     &_m {
       font-size: 1.5em;
       line-height: 1.2;
-      margin-bottom: .2em;
+      margin-bottom: .2rem;
     }
   }
 
@@ -301,7 +301,7 @@
   // .card__timer
 
   &__timer {
-    padding: .4em 1.2em;
+    padding: .4rem 1.2rem;
     font-style: normal;
     font-weight: 400;
     font-size: 1.4em;
@@ -314,7 +314,7 @@
   // .card__rating
 
   &__rating {
-    padding-left: 1.4em;
+    padding-left: 1.4rem;
     font-style: normal;
     font-weight: 700;
     font-size: 1em;

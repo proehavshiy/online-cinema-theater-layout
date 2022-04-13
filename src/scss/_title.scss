@@ -1,5 +1,5 @@
 .title {
-  margin-bottom: 3.5em;
+  margin-bottom: 3.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,7 +7,7 @@
   // title_aside
 
   &_aside {
-    margin-bottom: 2.6em;
+    margin-bottom: 2.6rem;
   }
 
   // .title__left
@@ -17,7 +17,7 @@
     align-items: center;
 
     &>*:not(:last-child) {
-      margin-right: 2em;
+      margin-right: 2rem;
     }
   }
 
@@ -62,7 +62,7 @@
 
     // title__operation-name_aside
     &_aside {
-      margin-right: 1.5em;
+      margin-right: 1.5rem;
     }
   }
 
@@ -89,7 +89,7 @@
     justify-content: center;
 
     &>* {
-      padding: .2em;
+      padding: .2rem;
     }
   }
 
@@ -108,7 +108,7 @@
   // .title__operation-value
 
   &__operation-value {
-    margin-right: 0.4em;
+    margin-right: 0.4rem;
     font-weight: 400;
     font-size: 1.4em;
     line-height: 1.1428;
