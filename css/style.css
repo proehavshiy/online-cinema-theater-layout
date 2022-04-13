@@ -707,7 +707,7 @@ body.locked {
 }
 
 .menu > *:not(:last-child) {
-  margin-right: 2.5rem;
+  margin-right: 2.4rem;
 }
 
 .menu__item-link {
@@ -723,7 +723,7 @@ body.locked {
 }
 
 .time-bar {
-  margin-right: 8.7rem;
+  margin-right: 8rem;
   text-align: center;
 }
 
@@ -1379,57 +1379,6 @@ body.locked {
   html,
   body {
     font-size: calc(5px + 8.5 * ((100vw - 320px) / 1440));
-  }
-}
-
-@media screen and (max-width: 767.98px) {
-  .menu {
-    position: fixed;
-    background: #17161B;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    -ms-grid-columns: -webkit-min-content;
-    -ms-grid-columns: min-content;
-    grid-template-columns: -webkit-min-content;
-    grid-template-columns: min-content;
-    grid-template-rows: repeat(auto-fit, minmax(50px, -webkit-max-content));
-    grid-template-rows: repeat(auto-fit, minmax(50px, max-content));
-    justify-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    gap: 10px;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    -webkit-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
-    pointer-events: none;
-  }
-
-  .menu.active {
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    pointer-events: all;
-    z-index: 22;
-    -webkit-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
-  }
-
-  .menu__item-link {
-    color: #FFFFFF;
-    font-size: 24px;
-  }
-
-  .menu__item-link svg {
-    display: none;
   }
 }
 
