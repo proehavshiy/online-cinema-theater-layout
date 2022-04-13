@@ -79,7 +79,8 @@
 html,
 body {
   font-family: $fontMain;
-  font-size: 62.5%; // 10px удобно для rem
+  @include adaptive-font(10, 5);
+  // font-size: 62.5%; // 10px удобно для rem
   background: $blackTheme;
   color: $fontMainColor;
 
@@ -90,113 +91,114 @@ body {
 }
 
 // * сброс базового размера шрифта при верстке на rem
-@media (max-width: 1079.99px) {
-  html {
-    font-size: 9px;
-  }
-}
 
-@media (max-width: 1049.99px) {
-  html {
-    font-size: 8.75px;
-  }
-}
+// @media (max-width: 1079.99px) {
+//   html {
+//     font-size: 9px;
+//   }
+// }
 
-@media (max-width: 914.99px) {
-  html {
-    font-size: 7.9px;
-  }
-}
+// @media (max-width: 1049.99px) {
+//   html {
+//     font-size: 8.75px;
+//   }
+// }
 
-@media (max-width: 909.99px) {
-  html {
-    font-size: 8.4px;
-  }
-}
+// @media (max-width: 914.99px) {
+//   html {
+//     font-size: 7.9px;
+//   }
+// }
 
-@media (max-width: 899.99px) {
-  html {
-    font-size: 7.9px;
-  }
-}
+// @media (max-width: 909.99px) {
+//   html {
+//     font-size: 8.4px;
+//   }
+// }
 
-@media (max-width: 799.99px) {
-  html {
-    font-size: 7.2px;
-  }
-}
+// @media (max-width: 899.99px) {
+//   html {
+//     font-size: 7.9px;
+//   }
+// }
 
-@media (max-width: 719.99px) {
-  html {
-    font-size: 6.5px;
-  }
-}
+// @media (max-width: 799.99px) {
+//   html {
+//     font-size: 7.2px;
+//   }
+// }
 
-@media (max-width: 639.99px) {
-  html {
-    font-size: 5.5px;
-  }
-}
+// @media (max-width: 719.99px) {
+//   html {
+//     font-size: 6.5px;
+//   }
+// }
 
-// 768px
-@media (max-width: 479.99px) {
-  html {
-    font-size: 10px;
-  }
-}
+// @media (max-width: 639.99px) {
+//   html {
+//     font-size: 5.5px;
+//   }
+// }
 
-@media (max-width: 439.99px) {
-  html {
-    font-size: 9px;
-  }
-}
+// // 768px
+// @media (max-width: 479.99px) {
+//   html {
+//     font-size: 10px;
+//   }
+// }
 
-@media (max-width: 379.99px) {
-  html {
-    font-size: 8px;
-  }
-}
+// @media (max-width: 439.99px) {
+//   html {
+//     font-size: 9px;
+//   }
+// }
 
-@media (max-width: 339.99px) {
-  html {
-    font-size: 7px;
-  }
-}
+// @media (max-width: 379.99px) {
+//   html {
+//     font-size: 8px;
+//   }
+// }
 
-@media (max-width: 299.99px) {
-  html {
-    font-size: 6px;
-  }
-}
+// @media (max-width: 339.99px) {
+//   html {
+//     font-size: 7px;
+//   }
+// }
 
-@media (max-width: 259.99px) {
-  html {
-    font-size: 4.5px;
-  }
-}
+// @media (max-width: 299.99px) {
+//   html {
+//     font-size: 6px;
+//   }
+// }
 
-@media (max-width: 209.99px) {
-  html {
-    font-size: 4.4px;
-  }
-}
+// @media (max-width: 259.99px) {
+//   html {
+//     font-size: 4.5px;
+//   }
+// }
+
+// @media (max-width: 209.99px) {
+//   html {
+//     font-size: 4.4px;
+//   }
+// }
 
 
 
-// * Animations
-// * Fade
+// // * Animations
+// // * Fade
 
-@keyframes fade {
+// @keyframes fade {
 
-  // для анимации табов
-  0% {
-    opacity: 0;
-  }
+//   // для анимации табов
+//   0% {
+//     opacity: 0;
+//   }
 
-  100% {
-    opacity: 1;
-  }
-}
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
 
 @keyframes cycledMove {
