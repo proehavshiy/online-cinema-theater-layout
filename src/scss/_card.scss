@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 1.6rem;
+    border-radius: 1.6em;
     z-index: 1;
   }
 
@@ -32,7 +32,7 @@
     align-items: flex-start;
     justify-content: flex-end;
 
-    border-radius: 1.6rem;
+    border-radius: 1.6em;
 
     background-size: cover;
     background-repeat: no-repeat;
@@ -94,8 +94,8 @@
 
   &__views {
     position: absolute;
-    top: 1.9rem;
-    left: 1.9rem;
+    top: 1.9em;
+    left: 1.9em;
     font-style: normal;
     z-index: 2;
 
@@ -104,7 +104,7 @@
 
     &_default {
       font-weight: 700;
-      font-size: 1.6rem;
+      font-size: 1.6em;
       line-height: 1.1875;
     }
 
@@ -113,7 +113,7 @@
     &_accent {
       display: none;
       font-weight: 400;
-      font-size: 1.4rem;
+      font-size: 1.4em;
       line-height: 1.1428;
 
       background: rgba(255, 255, 255, 0.3);
@@ -121,7 +121,7 @@
       /* Note: backdrop-filter has minimal browser support */
       border-radius: 16px;
 
-      padding: .5rem 1.5rem;
+      padding: .5em 1.5em;
     }
 
     // __views_s
@@ -142,13 +142,13 @@
     // .card__control-bar_l
 
     &_l {
-      padding: 1.9rem;
+      padding: 1.9em;
     }
 
     // .card__control-bar_m
 
     &_m {
-      padding: 1.9rem;
+      padding: 1.9em;
       background: rgba(255, 255, 255, 0.07);
       backdrop-filter: blur(16px);
       /* Note: backdrop-filter has minimal browser support */
@@ -159,7 +159,7 @@
     // card__control-bar_s
 
     &_s {
-      padding: 1rem 1.9rem;
+      padding: 1em 1.9em;
       background: rgba(255, 255, 255, 0.07);
       backdrop-filter: blur(16px);
       /* Note: backdrop-filter has minimal browser support */
@@ -181,9 +181,9 @@
     // .card__play_l
 
     &_l {
-      width: 8.1rem;
-      height: 8.1rem;
-      background-size: 2rem;
+      width: 8.1em;
+      height: 8.1em;
+      background-size: 2em;
 
       position: absolute;
       top: 50%;
@@ -195,19 +195,19 @@
     // .card__play_m
 
     &_m {
-      margin-right: 1.5rem;
-      width: 3rem;
-      height: 3rem;
-      background-size: 1.11rem 1.11rem;
+      margin-right: 1.5em;
+      width: 3em;
+      height: 3em;
+      background-size: 1.11em 1.11em;
     }
 
     // .card__play_s
 
     &_s {
-      margin-right: 1rem;
-      width: 1.8rem;
-      height: 1.8rem;
-      background-size: .667rem .667rem;
+      margin-right: 1em;
+      width: 1.8em;
+      height: 1.8em;
+      background-size: .667em .667em;
     }
   }
 
@@ -239,25 +239,25 @@
     // .card__name_l
 
     &_l {
-      font-size: 2.4rem;
+      font-size: 2.4em;
       line-height: 1.1666;
-      margin-bottom: .5rem;
+      margin-bottom: .5em;
     }
 
     // .card__name_s
 
     &_s {
-      font-size: 1rem;
-      line-height: 1.2rem;
-      margin-bottom: .2rem;
+      font-size: 1em;
+      line-height: 1.2;
+      margin-bottom: .2em;
     }
 
     // .card__name_m
 
     &_m {
-      font-size: 1.5rem;
+      font-size: 1.5em;
       line-height: 1.2;
-      margin-bottom: .2rem;
+      margin-bottom: .2em;
     }
   }
 
@@ -270,21 +270,21 @@
     // .card__date_l
 
     &_l {
-      font-size: 1.4rem;
+      font-size: 1.4em;
       line-height: 1.1428;
     }
 
     // .card__date_s
 
     &_s {
-      font-size: .8rem;
+      font-size: .8em;
       line-height: 1.125;
     }
 
     // .card__date_m
 
     &_m {
-      font-size: 1rem;
+      font-size: 1em;
       line-height: 1.2;
     }
   }
@@ -301,27 +301,27 @@
   // .card__timer
 
   &__timer {
-    padding: .4rem 1.2rem;
+    padding: .4em 1.2em;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 1.4em;
     line-height: 1.1428;
     color: #000000;
     background: $fontMainColor;
-    border-radius: 1.6rem;
+    border-radius: 1.6em;
   }
 
   // .card__rating
 
   &__rating {
-    padding-left: 1.4rem;
+    padding-left: 1.4em;
     font-style: normal;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.2;
 
     background: url('../img/star-icon.svg') no-repeat;
-    background-size: 1rem 1rem;
+    background-size: 1em 1em;
     background-position-y: center;
   }
 }

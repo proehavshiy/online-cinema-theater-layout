@@ -1,5 +1,5 @@
 .title {
-  margin-bottom: 3.5rem;
+  margin-bottom: 3.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,7 +7,7 @@
   // title_aside
 
   &_aside {
-    margin-bottom: 2.6rem;
+    margin-bottom: 2.6em;
   }
 
   // .title__left
@@ -17,7 +17,7 @@
     align-items: center;
 
     &>*:not(:last-child) {
-      margin-right: 2rem;
+      margin-right: 2em;
     }
   }
 
@@ -25,7 +25,7 @@
 
   &__main {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 2em;
     line-height: 1.15;
   }
 
@@ -33,7 +33,7 @@
 
   &__count {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 2em;
     line-height: 1.15;
     color: rgba(255, 255, 255, 0.2);
   }
@@ -45,24 +45,24 @@
     align-items: center;
 
     & img {
-      width: .45rem;
-      height: .9rem;
+      width: .45em;
+      height: .9em;
     }
   }
 
   // .title__operation-name
 
   &__operation-name {
-    margin-right: .8rem;
+    margin-right: .8em;
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 1.6em;
     line-height: 1.1428;
 
     color: rgba(255, 255, 255, 0.2);
 
     // title__operation-name_aside
     &_aside {
-      margin-right: 1.5rem;
+      margin-right: 1.5em;
     }
   }
 
@@ -72,8 +72,8 @@
     display: flex;
 
     & button {
-      width: .6rem;
-      height: .6rem;
+      width: .6em;
+      height: .6em;
       background: none;
       background-repeat: no-repeat;
       background-position: center;
@@ -89,7 +89,7 @@
     justify-content: center;
 
     &>* {
-      padding: .2rem;
+      padding: .2em;
     }
   }
 
@@ -108,9 +108,9 @@
   // .title__operation-value
 
   &__operation-value {
-    margin-right: 0.4rem;
+    margin-right: 0.4em;
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 1.4em;
     line-height: 1.1428;
     color: #FFFFFF;
   }

@@ -1,4 +1,10 @@
-.main {}
+.main {
+  font-size: calc(1rem * (1355/961)); // базовый размер шрифта при полноэкранном режиме
+
+  &_collapsed {
+    font-size: 1rem; // базовый размер шрифта при раскрытом aside
+  }
+}
 
 .main-display {
 
@@ -6,7 +12,7 @@
 
   &__section {
     &:not(:last-child) {
-      margin-bottom: 3.5rem;
+      margin-bottom: 3.5em;
     }
   }
 
@@ -25,14 +31,14 @@
 
     &_continuing {
       grid-template-columns: repeat(2, minmax(calc((450/961) *100%), max-content));
-      gap: 6rem calc(60/961*100%);
+      gap: 6em calc(60/961*100%);
     }
 
     // .main-display__card-wrapper_trending
 
     &_trending {
       grid-template-columns: repeat(3, minmax(calc(286/961*100%), max-content));
-      gap: 5rem calc(50/961*100%);
+      gap: 5em calc(50/961*100%);
     }
   }
 }
