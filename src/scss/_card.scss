@@ -38,6 +38,7 @@
     background-repeat: no-repeat;
     background-position: center;
 
+
     // .card__content-wrapper_l
 
     &_l {
@@ -55,10 +56,7 @@
     &_m {
       background-image: url("../img/card2.jpg");
 
-      // показываем плашку trending 
-      &:first-child .card__views_accent {
-        display: block;
-      }
+
     }
 
     // .card__content-wrapper_s
@@ -83,6 +81,11 @@
   // card_m
   &_m {
     padding-top: calc(251/450*100%); // для пропорций карточки
+
+    // показываем плашку trending 
+    &:first-child .card__views_accent {
+      display: block;
+    }
   }
 
   // card_s

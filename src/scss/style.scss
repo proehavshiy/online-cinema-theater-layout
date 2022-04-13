@@ -12,41 +12,9 @@
 
 // * Main SCSS Content
 
-
-// ! потом перенести в reset
-.nav-element {
-  font-family: inherit;
-  font-weight: 400;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-a {
-  color: inherit;
-}
-
-input {
-  outline: none;
-  border: none;
-}
-
-// !
-
-
-
 //*
 
 // * компоненты
-// кнопка
-// @import"../htmlParts/components/button/button";
-// @import"../htmlParts/components/Grid-for-cards/Grid-for-cards";
-// @import "../htmlParts/components/Card-with-image/card-with-image";
-// @import"../htmlParts/components/Social-bar/Social-bar";
 
 // * Sections SCSS files imports
 @import "_header";
@@ -54,4 +22,3 @@ input {
 @import"_main";
 @import"_title";
 @import"_card";
-// @import"_footer";
