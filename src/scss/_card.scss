@@ -1,14 +1,6 @@
 .card {
   position: relative;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  border-radius: 1.6rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 100%;
 
   &::after {
     content: '';
@@ -26,37 +18,76 @@
   // card_accent
   &_accent {}
 
+
+  // .card__content-wrapper
+  &__content-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    border-radius: 1.6rem;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    // .card__content-wrapper_l
+
+    &_l {
+      background-image: url("../img/card1.jpg");
+    }
+
+    // .card__content-wrapper_l-sidebar
+
+    &_l-sidebar {
+      background-image: url("../img/card4.jpg");
+    }
+
+    // .card__content-wrapper_m
+
+    &_m {
+      background-image: url("../img/card2.jpg");
+
+      // показываем плашку trending 
+      &:first-child .card__views_accent {
+        display: block;
+      }
+    }
+
+    // .card__content-wrapper_s
+
+    &_s {
+      background-image: url("../img/card3.jpg");
+    }
+  }
+
   // card_l
+
   &_l {
-    // width: 100%;
-    min-height: 20.2rem;
-    // background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    background-image: url("../img/card1.jpg");
-    position: relative;
+    padding-top: calc(202/962*100%); // для пропорций карточки
   }
 
   // card_l-sidebar
+
   &_l-sidebar {
-    min-height: 22.6rem;
+    padding-top: calc(226/371*100%); // для пропорций карточки
   }
 
   // card_m
   &_m {
-    // width: calc(450/961*100%);
-    min-height: 25.1rem;
-    background-image: url("../img/card2.jpg");
-
-    // показываем плашку trending 
-    &:first-child .card__views_accent {
-      display: block;
-    }
+    padding-top: calc(251/450*100%); // для пропорций карточки
   }
 
   // card_s
   &_s {
-    // width: calc(286/961*100%);
-    min-height: 19.2rem;
-    background-image: url("../img/card3.jpg");
+    padding-top: calc(192/286*100%); // для пропорций карточки
   }
 
   // .card__views
