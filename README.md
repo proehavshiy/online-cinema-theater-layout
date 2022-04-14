@@ -1,5 +1,6 @@
 ## Online cinema theater layout
-Верстка макета онлайн-кинотеатра без адаптива на сборке gulp
+Верстка макета онлайн-кинотеатра без адаптива на сборке gulp. <br/>
+Упражнялся в построении сеток на гридах, pixel perfect и резиновых размеров блоков и шрифтов.
 <br/>
 
 [Figma](https://www.figma.com/file/hK19KMrdenFftMq0ARtFpY/Movea-%7C-Online-Cinema-(Copy)-(Copy))
